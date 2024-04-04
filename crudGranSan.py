@@ -9,7 +9,7 @@ def menu():
     return opcion
 
 def crear():
-    client = pymongo.MongoClient("mongodb://localhost:27017/")
+    client = pymongo.MongoClient("Ingrese aqui el host y puerto de mongo")
     db = client["gran_san"]
     collection = db["publicaciones"]
     id_publicacion = input("Ingrese el ID de la publicación: ")
@@ -33,7 +33,7 @@ def crear():
     print("ID del nuevo documento:", insert_result.inserted_id)
 
 def consultar():
-    client = pymongo.MongoClient("mongodb://localhost:27017/")
+    client = pymongo.MongoClient("Ingrese aqui el host y puerto de mongo")
     db = client["gran_san"]
     collection = db["publicaciones"]
     id_publicacion = input("Ingrese el ID de la publicación a buscar: ")
@@ -51,7 +51,7 @@ def consultar():
         print("No se encontró ninguna publicación con ese ID.")
 
 def actualizar():
-    client = pymongo.MongoClient("mongodb://localhost:27017/")
+    client = pymongo.MongoClient("Ingrese aqui el host y puerto de mongo")
     db = client["gran_san"]
     collection = db["publicaciones"]
     id_publicacion = input("Ingrese el ID de la publicación a actualizar: ")
@@ -73,7 +73,7 @@ def actualizar():
         print("No se encontró ninguna publicación con ese ID.")
 
 def eliminar():
-    client = pymongo.MongoClient("mongodb://localhost:27017/")
+    client = pymongo.MongoClient("Ingrese aqui el host y puerto de mongo")
     db = client["gran_san"]
     collection = db["publicaciones"]
     id_publicacion = input("Ingrese el ID de la publicación a eliminar: ")
@@ -89,7 +89,7 @@ def salir():
     exit()
 
 def cargue():
-    client = pymongo.MongoClient("mongodb://localhost:27017/")
+    client = pymongo.MongoClient("Ingrese aqui el host y puerto de mongo")
     db = client["gran_san"]
     collection = db["publicaciones"]
     # Puedes insertar publicaciones iniciales aquí si lo deseas
